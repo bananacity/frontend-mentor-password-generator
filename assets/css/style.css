@@ -1,5 +1,5 @@
 body {
-  background-color: var(--color-grey-950);
+  background: var(--gradient-main);
   display: flex;
   justify-content: center;
   padding-top: 8.3125rem;
