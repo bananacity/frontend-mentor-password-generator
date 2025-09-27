@@ -82,14 +82,14 @@
 /* General */
 @font-face {
   font-family: "JetBrains Mono";
-  src: url("/assets/fonts/JetBrainsMono-VariableFont_wght.ttf");
+  src: url("assets/fonts/JetBrainsMono-VariableFont_wght.ttf");
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: "JetBrains Mono";
-  src: url("/assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf");
+  src: url("assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf");
   font-style: italic;
   font-display: swap;
 }
