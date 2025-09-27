@@ -169,7 +169,7 @@ input[type="checkbox"]:checked {
 }
 
 input[type="checkbox"]:checked::after {
-  content: url("assets/images/icon-check.svg");
+  content: url("../images/icon-check.svg");
   position: absolute;
   top: 50%;
   left: 50%;
