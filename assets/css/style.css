@@ -112,6 +112,7 @@ body {
   appearance: none;
   background: transparent;
   cursor: pointer;
+  height: 1.75rem;
 }
 
 .character-length-slider::-webkit-slider-runnable-track {
