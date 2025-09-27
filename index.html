@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/general.css" />
+  </head>
+  <body>
+    <main>
+      <article class="password-generator">
+        <h1 class="text-preset-2 password-generator__title">
+          Password Generator
+        </h1>
+
+        <div class="password-generator__main-container">
+          <div class="password-generator__output-wrapper">
+            <input
+              type="text"
+              placeholder="P4$5W0rD!"
+              class="password-generator__output text-preset-1"
+              readonly
+            />
+
+            <div class="password-generator__copy-container">
+              <p class="text-preset-3 password-generator__copy-text">Copied</p>
+
+              <button class="password-generator__copy-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="24">
+                  <path
+                    d="M20.341 3.091 17.909.659A2.25 2.25 0 0 0 16.319 0H8.25A2.25 2.25 0 0 0 6 2.25V4.5H2.25A2.25 2.25 0 0 0 0 6.75v15A2.25 2.25 0 0 0 2.25 24h10.5A2.25 2.25 0 0 0 15 21.75V19.5h3.75A2.25 2.25 0 0 0 21 17.25V4.682a2.25 2.25 0 0 0-.659-1.591ZM12.469 21.75H2.53a.281.281 0 0 1-.281-.281V7.03a.281.281 0 0 1 .281-.281H6v10.5a2.25 2.25 0 0 0 2.25 2.25h4.5v1.969a.282.282 0 0 1-.281.281Zm6-4.5H8.53a.281.281 0 0 1-.281-.281V2.53a.281.281 0 0 1 .281-.281H13.5v4.125c0 .621.504 1.125 1.125 1.125h4.125v9.469a.282.282 0 0 1-.281.281Zm.281-12h-3v-3h.451c.075 0 .147.03.2.082L18.667 4.6a.283.283 0 0 1 .082.199v.451Z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <form class="password-form">
+            <div class="character-length-section">
+              <div class="character-length-wrapper">
+                <label for="character-length-slider" class="text-preset-3">
+                  Character Length
+                </label>
+
+                <span class="text-preset-1 character-length-display">0</span>
+              </div>
+
+              <input
+                type="range"
+                name=""
+                max="20"
+                value="0"
+                id="character-length-slider"
+                class="character-length-slider"
+              />
+            </div>
+
+            <div class="text-preset-3 password-options-container">
+              <div class="form-group">
+                <input type="checkbox" id="uppercase-letters-checkbox" />
+                <label for="uppercase-letters-checkbox">
+                  Include Uppercase Letters
+                </label>
+              </div>
+
+              <div class="form-group">
+                <input type="checkbox" id="lowercase-letters-checkbox" />
+                <label for="lowercase-letters-checkbox">
+                  Include Lowercase Letters
+                </label>
+              </div>
+
+              <div class="form-group">
+                <input type="checkbox" id="numbers-checkbox" />
+                <label for="numbers-checkbox">Include Numbers</label>
+              </div>
+
+              <div class="form-group">
+                <input type="checkbox" id="symbols-checkbox" />
+                <label for="symbols-checkbox">Include Symbols</label>
+              </div>
+            </div>
+
+            <div class="card-generate-section">
+              <div class="strength-section">
+                <p class="text-preset-3 strength-text">Strength</p>
+
+                <div class="strength-bar-wrapper">
+                  <p class="text-preset-2 strength-rating-text"></p>
+
+                  <div class="strength-bar-container">
+                    <div class="strength-bar"></div>
+                    <div class="strength-bar"></div>
+                    <div class="strength-bar"></div>
+                    <div class="strength-bar"></div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="generate-btn text-preset-3" type="submit">
+                Generate
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12">
+                  <path
+                    d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </article>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

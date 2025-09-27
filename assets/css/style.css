@@ -1,0 +1,280 @@
+body {
+  background-color: var(--color-grey-950);
+  display: flex;
+  justify-content: center;
+  padding-top: 8.3125rem;
+}
+
+.password-generator {
+  max-width: 33.75rem;
+  display: grid;
+  gap: var(--spacing-400);
+  margin-inline: var(--spacing-200);
+}
+
+.password-generator__title {
+  color: var(--color-grey-600);
+  text-align: center;
+}
+
+.password-generator__main-container {
+  display: grid;
+  gap: var(--spacing-300);
+}
+
+.password-generator__output-wrapper {
+  position: relative;
+  display: grid;
+}
+
+.password-generator__output {
+  border: none;
+  height: var(--spacing-1000);
+  width: 100%;
+  padding: var(--spacing-200) var(--spacing-400);
+  padding-right: var(--spacing-1000);
+  background-color: var(--color-grey-800);
+  color: var(--color-grey-200);
+}
+
+.password-generator__output::placeholder {
+  color: var(--color-grey-700);
+}
+
+.password-generator__copy-container {
+  display: flex;
+  align-items: center;
+  color: var(--color-green-200);
+  fill: var(--color-green-200);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.password-generator__copy-wrapper {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  height: var(--spacing-1000);
+  padding-right: var(--spacing-400);
+  padding-left: var(--spacing-300);
+  transition: all 200ms;
+}
+
+.password-generator__copy-wrapper:hover,
+.password-generator__copy-wrapper:active {
+  fill: var(--color-white);
+}
+
+.password-generator__copy-wrapper.password-generator__copy-wrapper--active {
+  fill: var(--color-green-200);
+}
+
+.password-generator__copy-text {
+  height: var(--spacing-1000);
+  background-color: var(--color-grey-800);
+  text-transform: uppercase;
+  opacity: 0;
+  padding-left: var(--spacing-200);
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+}
+
+.password-form {
+  display: grid;
+  gap: var(--spacing-400);
+  color: var(--color-grey-200);
+  background-color: var(--color-grey-800);
+  padding: var(--spacing-300) var(--spacing-400) 2.5625rem var(--spacing-400);
+}
+
+/* Character length section */
+.character-length-section {
+  display: grid;
+  gap: var(--spacing-200);
+}
+
+.character-length-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.character-length-display {
+  color: var(--color-green-200);
+}
+
+/* Character length slider */
+.character-length-slider {
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.character-length-slider::-webkit-slider-runnable-track {
+  background: var(--slider-bg, var(--color-grey-850));
+  height: 0.5rem;
+}
+
+.character-length-slider::-webkit-slider-thumb {
+  appearance: none;
+  height: 1.75rem;
+  width: 1.75rem;
+  background-color: var(--color-grey-200);
+  border-radius: 50%;
+  transform: translateY(calc(-50% + 0.25rem));
+  transition: all 200ms;
+  border: 2px solid var(--color-grey-200);
+}
+
+.character-length-slider::-webkit-slider-thumb:hover,
+.character-length-slider::-webkit-slider-thumb:active {
+  background-color: var(--color-grey-850);
+  border-color: var(--color-green-200);
+}
+
+/* Password options checkboxes section */
+.password-options-container {
+  display: grid;
+  gap: var(--spacing-200);
+}
+
+.form-group {
+  display: flex;
+  gap: var(--spacing-300);
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid var(--color-grey-200);
+  cursor: pointer;
+  transition: all 200ms;
+  position: relative;
+}
+
+input[type="checkbox"]:hover,
+input[type="checkbox"]:active {
+  border-color: var(--color-green-200);
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--color-green-200);
+  border-color: var(--color-green-200);
+}
+
+input[type="checkbox"]:checked::after {
+  content: url("/assets/images/icon-check.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-group label {
+  cursor: pointer;
+}
+
+/* Generate section */
+
+.card-generate-section {
+  display: grid;
+  gap: var(--spacing-400);
+}
+
+.strength-section {
+  background-color: var(--color-grey-850);
+  padding: var(--spacing-200) var(--spacing-400);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  height: 4.5rem;
+}
+
+.strength-text {
+  color: var(--color-grey-600);
+}
+
+.strength-bar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-200);
+}
+
+.strength-bar-container {
+  display: flex;
+  gap: var(--spacing-100);
+}
+
+.strength-bar {
+  height: 1.75rem;
+  width: 0.625rem;
+  border: 2px solid var(--color-grey-200);
+}
+
+.strength-bar--too-weak {
+  background-color: var(--color-red-500);
+  border-color: var(--color-red-500);
+}
+
+.strength-bar--weak {
+  background-color: var(--color-orange-400);
+  border-color: var(--color-orange-400);
+}
+
+.strength-bar--medium {
+  background-color: var(--color-yellow-300);
+  border-color: var(--color-yellow-300);
+}
+
+.strength-bar--strong {
+  background-color: var(--color-green-200);
+  border-color: var(--color-green-200);
+}
+
+/* Button */
+.generate-btn {
+  background-color: var(--color-green-200);
+  color: var(--color-grey-800);
+  fill: var(--color-grey-800);
+  border: none;
+  cursor: pointer;
+  padding-block: var(--spacing-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-300);
+  border: 2px solid var(--color-green-200);
+  transition: all 200ms;
+  height: 4.0625rem;
+  text-transform: uppercase;
+}
+
+.generate-btn:hover,
+.generate-btn:active {
+  background-color: transparent;
+  color: var(--color-green-200);
+  fill: var(--color-green-200);
+}
+
+/* Responsive design */
+@media (width <= 26.75rem) {
+  body {
+    padding-top: 4.0625rem;
+  }
+
+  .generate-btn {
+    height: 3.5rem;
+  }
+
+  .strength-section {
+    height: 3.5rem;
+    padding: 0.875rem var(--spacing-200);
+  }
+}
